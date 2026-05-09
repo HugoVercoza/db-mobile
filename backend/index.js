@@ -1,8 +1,9 @@
 require('dotenv').config();
 const express = require('express');
 const { Pinecone } = require('@pinecone-database/pinecone');
-const { pipeline } = require('@xenova/transformers');
+const { pipeline, mean_pooling } = require('@xenova/transformers');
 const fs = require('fs');
+const { normalize } = require('path');
 
 const app = express();
 app.use(express.json());
@@ -25,6 +26,46 @@ async function getEmbedder() {
 // Rota de Teste
 app.get('/', (req, res) => {
   res.send('Servidor Rodando!');
+});
+
+// Rota de upload
+app.post('/upload-produtos', async (req,res) => {
+  try {
+    //lendo os produtos
+    const dados = fs.readFileSync('./produtos.json', 'utf-8');
+    const produtos = JSON.parse(dados);
+
+    const gerarVetores = await getEmbedder();
+    const listaDeEnvio = [];
+
+    for (const produto of produtos){
+      const output = await gerarVetores(produto.descricao, {
+        pooling: "mean",
+        normalize: true
+      });
+    
+
+      const vetor = Array.from(output.data);
+
+      listaDeEnvio.push({
+        id: produto.id.toString(),
+        values: vetor,
+        metadata: {
+          nome: produto.nome,
+          preco: produto.preco,
+          categoria: produto.categoria
+        }
+      });
+    }
+
+    // Envia para o pinecone
+    await index.upsert(listaDeEnvio);
+
+    res.json({message: "Enviado para o Pinecone"});
+  } catch (error) {
+    console.error("Erro ao concluir o processo", error);
+    res.status(500).json({error: "Erro interno no servidor"});
+  }
 });
 
 const PORT = 3000;
