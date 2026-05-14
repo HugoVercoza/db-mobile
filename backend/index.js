@@ -43,19 +43,20 @@ app.post('/upload-produtos', async (req,res) => {
         pooling: "mean",
         normalize: true
       });
-    
 
       const vetor = Array.from(output.data);
-
-      listaDeEnvio.push({
+      
+      const produtoFormatado = {
         id: produto.id.toString(),
         values: vetor,
         metadata: {
-          nome: produto.nome,
-          preco: produto.preco,
-          categoria: produto.categoria
+          nome: String(produto.nome),
+          preco: String(produto.preco),
+          categoria: String(produto.categoria)
         }
-      });
+      }
+
+      listaDeEnvio.push(produtoFormatado);
     }
 
     // Envia para o pinecone
@@ -64,7 +65,7 @@ app.post('/upload-produtos', async (req,res) => {
     res.json({message: "Enviado para o Pinecone"});
   } catch (error) {
     console.error("Erro ao concluir o processo", error);
-    res.status(500).json({error: "Erro interno no servidor"});
+    res.status(500).json({error: error.message});
   }
 });
 
