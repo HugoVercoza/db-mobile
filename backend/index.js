@@ -5,8 +5,10 @@ const { pipeline, mean_pooling } = require('@xenova/transformers');
 const fs = require('fs');
 const { normalize } = require('path');
 const { get } = require('http');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // Configurar o pinecone
