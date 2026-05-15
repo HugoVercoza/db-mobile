@@ -1,25 +1,25 @@
 [
-  { "id": "1", "nome": "Casaco de Lã Batida", "descricao": "Sobretudo masculino elegante e pesado para proteção térmica em dias de frio rigoroso.", "categoria": "Inverno", "preco": 389.90, "url_imagem": "" },
-  { "id": "2", "nome": "Moletom Canguru", "descricao": "Agasalho unissex com capuz e forro flanelado, ideal para se manter aquecido no inverno.", "categoria": "Inverno", "preco": 129.00, "url_imagem": "" },
-  { "id": "3", "nome": "Cachecol de Tricô", "descricao": "Acessório de inverno macio para proteger o pescoço contra ventos gelados.", "categoria": "Inverno", "preco": 45.00, "url_imagem": "" },
-  { "id": "4", "nome": "Gorro de Lã", "descricao": "Touca de inverno para proteção das orelhas e cabeça em baixas temperaturas.", "categoria": "Inverno", "preco": 35.00, "url_imagem": "" },
-  { "id": "5", "nome": "Jaqueta de Couro", "descricao": "Jaqueta masculina robusta, oferece isolamento contra o vento e estilo para sair no frio.", "categoria": "Inverno", "preco": 299.90, "url_imagem": "" },
-
-  { "id": "6", "nome": "Bermuda Cargo Masculina", "descricao": "Short masculino de sarja, peça de roupa leve e fresca para passeios no verão.", "categoria": "Verão", "preco": 89.90, "url_imagem": "" },
-  { "id": "7", "nome": "Saia Midi Floral", "descricao": "Peça feminina fluida e soltinha, perfeita para dias ensolarados e clima quente.", "categoria": "Verão", "preco": 110.00, "url_imagem": "" },
-  { "id": "8", "nome": "Chinelo de Borracha", "descricao": "Calçado aberto e confortável para usar na praia ou piscina em dias de calor.", "categoria": "Verão", "preco": 39.90, "url_imagem": "" },
-  { "id": "9", "nome": "Short Jeans Feminino", "descricao": "Roupa curta feminina para o verão, ideal para looks casuais em dias de sol.", "categoria": "Verão", "preco": 75.00, "url_imagem": "" },
-  { "id": "10", "nome": "Regata de Algodão", "descricao": "Camisa sem manga básica e respirável para suportar altas temperaturas.", "categoria": "Verão", "preco": 45.00, "url_imagem": "" },
-
-  { "id": "11", "nome": "Sunga Boxer Mar azul", "descricao": "Traje de banho masculino clássico com secagem rápida para mar ou piscina.", "categoria": "Banho", "preco": 65.00, "url_imagem": "" },
-  { "id": "12", "nome": "Sunga Slip Preta", "descricao": "Roupa de banho masculina confortável para natação e lazer no verão.", "categoria": "Banho", "preco": 55.00, "url_imagem": "" },
-  { "id": "13", "nome": "Biquíni Cortininha", "descricao": "Conjunto de banho feminino para aproveitar o sol na praia.", "categoria": "Banho", "preco": 98.00, "url_imagem": "" },
-  { "id": "14", "nome": "Biquíni Cintura Alta", "descricao": "Moda praia feminina elegante com tecido resistente ao cloro e sal.", "categoria": "Banho", "preco": 120.00, "url_imagem": "" },
-  { "id": "15", "nome": "Maiô Clássico", "descricao": "Peça única feminina de banho, oferece conforto e segurança para nadar.", "categoria": "Banho", "preco": 145.00, "url_imagem": "" },
-
-  { "id": "16", "nome": "Legging de Compressão", "descricao": "Calça feminina elástica para treino, academia e exercícios físicos intensos.", "categoria": "Academia", "preco": 89.00, "url_imagem": "" },
-  { "id": "17", "nome": "Cropped Esportivo", "descricao": "Top feminino curto com tecido tecnológico que absorve o suor durante a malhação.", "categoria": "Academia", "preco": 55.00, "url_imagem": "" },
-  { "id": "18", "nome": "Regata Dry Fit Masculina", "descricao": "Camisa sem manga masculina para musculação, facilita a transpiração no treino.", "categoria": "Academia", "preco": 49.90, "url_imagem": "" },
-  { "id": "19", "nome": "Regata Cavada Feminina", "descricao": "Blusa sem manga feminina solta para crossfit e atividades aeróbicas.", "categoria": "Academia", "preco": 45.00, "url_imagem": "" },
-  { "id": "20", "nome": "Short de Treino Masculino", "descricao": "Bermuda leve com recorte lateral para maior liberdade de movimento na academia.", "categoria": "Academia", "preco": 69.90, "url_imagem": "" }
+  { "id": "1", "nome": "Casaco de Lã", "descricao": "Sobretudo elegante e pesado para garantir que você fique aquecido mesmo no frio rigoroso.", "categoria": "Inverno", "preco": 389.90 },
+  { "id": "2", "nome": "Moletom Canguru", "descricao": "Agasalho unissex com forro flanelado, ideal para se manter aquecido e confortável no inverno e no frio.", "categoria": "Inverno", "preco": 129.00 },
+  { "id": "3", "nome": "Cachecol de Tricô", "descricao": "Acessório macio para proteger o pescoço contra ventos do frio, mantendo o corpo aquecido.", "categoria": "Inverno", "preco": 45.00 },
+  { "id": "4", "nome": "Gorro de Lã", "descricao": "Touca de inverno para proteção térmica das orelhas no frio, mantendo você aquecido.", "categoria": "Inverno", "preco": 35.00 },
+  { "id": "5", "nome": "Jaqueta de Couro", "descricao": "Jaqueta robusta que oferece isolamento contra o vento frio e mantém o usuário aquecido com estilo.", "categoria": "Inverno", "preco": 299.90 },
+  
+  { "id": "6", "nome": "Bermuda Cargo Masculina", "descricao": "Short de sarja leve e fresco para passeios em dias de calor intenso.", "categoria": "Verão", "preco": 89.90 },
+  { "id": "7", "nome": "Saia Midi Floral", "descricao": "Peça feminina leve, soltinha e fluida, perfeita para dias ensolarados de calor.", "categoria": "Verão", "preco": 110.00 },
+  { "id": "8", "nome": "Chinelo de Borracha", "descricao": "Calçado aberto e leve para usar na praia ou piscina em dias de calor.", "categoria": "Verão", "preco": 39.90 },
+  { "id": "9", "nome": "Short Jeans Feminino", "descricao": "Roupa curta e leve para o verão, ideal para looks casuais em dias de calor e sol.", "categoria": "Verão", "preco": 75.00 },
+  { "id": "10", "nome": "Regata de Algodão", "descricao": "Camisa sem manga básica, leve e respirável para suportar os dias de calor.", "categoria": "Verão", "preco": 45.00 },
+  
+  { "id": "11", "nome": "Sunga Boxer Mar azul", "descricao": "Traje de banho clássico com secagem rápida, excelente para uso em praia ou piscina.", "categoria": "Banho", "preco": 65.00 },
+  { "id": "12", "nome": "Sunga Slip Preta", "descricao": "Roupa de banho confortável e anatômica para natação em praia ou piscina.", "categoria": "Banho", "preco": 55.00 },
+  { "id": "13", "nome": "Biquíni Cortininha", "descricao": "Conjunto de banho feminino leve para aproveitar o sol e o dia na praia ou piscina.", "categoria": "Banho", "preco": 98.00 },
+  { "id": "14", "nome": "Biquíni Cintura Alta", "descricao": "Moda praia elegante com tecido resistente para banhos de mar na praia ou piscina.", "categoria": "Banho", "preco": 120.00 },
+  { "id": "15", "nome": "Maiô Clássico", "descricao": "Peça única feminina de banho, oferece segurança para nadar na praia ou piscina.", "categoria": "Banho", "preco": 145.00 },
+  
+  { "id": "16", "nome": "Legging de Compressão", "descricao": "Calça feminina elástica para exercício, musculação e treinar com intensidade.", "categoria": "Academia", "preco": 89.00 },
+  { "id": "17", "nome": "Cropped Esportivo", "descricao": "Top feminino curto para exercício com tecido que absorve o suor ao treinar.", "categoria": "Academia", "preco": 55.00 },
+  { "id": "18", "nome": "Regata Dry Fit Masculina", "descricao": "Camisa sem manga para exercício que facilita a transpiração na hora de treinar.", "categoria": "Academia", "preco": 49.90 },
+  { "id": "19", "nome": "Regata Cavada Feminina", "descricao": "Blusa solta para exercício aeróbico e crossfit, ideal para treinar com conforto.", "categoria": "Academia", "preco": 45.00 },
+  { "id": "20", "nome": "Short de Treino Masculino", "descricao": "Bermuda leve para exercício com recorte lateral para melhor movimento ao treinar.", "categoria": "Academia", "preco": 69.90 }
 ]
