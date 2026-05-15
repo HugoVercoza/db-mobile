@@ -123,7 +123,7 @@ app.post('/buscar', async (req, res) => {
     // busca no banco os 5 mais parecidos (topK: 5)
     const resultado = await index.query({
       vector: vetorBusca,
-      topK: 5,
+      topK: 3,
       includeMetadata: true // metadata onde tem o nome e preço
     });
 
