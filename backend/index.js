@@ -29,7 +29,8 @@ app.get('/', (req, res) => {
   res.send('Servidor Rodando!');
 });
 
-// Rota de upload
+
+// Rota de upload para os produtos que estao no json
 app.post('/upload-produtos', async (req,res) => {
   try {
     //lendo os produtos
@@ -74,6 +75,36 @@ app.post('/upload-produtos', async (req,res) => {
   }
 });
 
+// Rota para cadastrar produtos novos
+app.post('/cadastrar-produto', async (req, res) => {
+    try {
+        const { id, nome, preco, categoria, descricao } = req.body;
+        const gerarVetores = await getEmbedder();
+        // Gera o vetor do novo produto
+        const textoVetor = `Produto: ${nome}, Categoria: ${categoria}, Descrição: ${descricao}`;
+
+        const output = await gerarVetores(textoVetor, { 
+          pooling: "mean", 
+          normalize: true 
+        });
+        const vetor = Array.from(output.data);
+
+        await index.upsert([{
+            id: String(id),
+            values: vetor,
+            metadata: {
+              nome: nome,
+              preco: String(preco),
+              categoria: categoria 
+            }
+        }]);
+
+        res.json({ message: `Produto ${nome} cadastrado` });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 // Rota de busca
 app.post('/buscar', async (req, res) => {
   try {
@@ -112,6 +143,23 @@ app.delete('/limpar-banco', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+//Rota para remover 1 produto cadastrado pelo id
+ app.delete('/remover-produto/:id', async (req, res) => {
+  try{
+    const { id } = req.params;
+    if(!id){
+      return res.status(400).json({error: "O id é obrigatório"});
+    } else{
+      await index.deleteMany([String(id)]);
+
+      res.json({message: `Produto de id ${id}, foi removido`})
+    }
+
+  } catch (error){
+    console.error(500).json({error: error.message});
+  }
+ });
 
 const PORT = 3000;
 app.listen(PORT, () => {
