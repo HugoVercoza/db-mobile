@@ -60,7 +60,8 @@ app.post('/upload-produtos', async (req,res) => {
         metadata: {
           nome: String(produto.nome),
           preco: String(produto.preco),
-          categoria: String(produto.categoria)
+          categoria: String(produto.categoria),
+          descricao: String(produto.descricao)
         }
       }
 
@@ -97,7 +98,8 @@ app.post('/cadastrar-produto', async (req, res) => {
             metadata: {
               nome: nome,
               preco: String(preco),
-              categoria: categoria 
+              categoria: categoria,
+              descricao: descricao
             }
         }]);
 
